@@ -1,0 +1,337 @@
+/* General Styles */
+/* Ensure the page takes full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Make the wrapper take full height, pushing footer down */
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content expands to push footer down */
+main {
+    flex: 1;
+}
+
+/* Footer stays at the bottom */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #222;
+    color: white;
+}
+body {
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    background: linear-gradient(to right, #1e3c72, #2a5298); /* Deep blue gradient */
+    text-align: center;
+    margin: 0;
+    color: white;
+}
+
+
+
+/* Header */
+header {
+    background: linear-gradient(to right, #5a3f95, #351a57); /* Rich purple gradient */
+    color: white;
+    padding: 30px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    border-radius: 12px; /* Smooth rounded edges */
+}
+
+
+header h1 {
+    font-size: 42px; /* Slightly larger for a stronger impact */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.3); /* Subtle glow effect */
+    animation: fadeInScale 1.2s ease-in-out;
+    background: linear-gradient(to right, #ffcc70, #ff6b6b); /* Warm gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
+
+
+
+/* Navigation Bar */
+nav {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    padding: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    padding: 12px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    transition: 0.3s ease-in-out;
+}
+nav ul li a.active {
+    background: rgba(255, 255, 255, 0.3); /* Subtle highlight */
+    color: #FFD700; /* Gold accent for elegance */
+	text-shadow: 0px 0px 8px rgba(0, 162, 255, 0.8); /* Subtle glow */
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    transform: scale(1.1); /* Slightly enlarges on hover */
+}
+
+/* Dropdown Fix */
+nav ul .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 180px;
+    background: linear-gradient(to right, #5a3f95, #351a57); /* Rich purple */
+    list-style: none;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    z-index: 9999;
+}
+
+
+/* Ensure parent has proper positioning */
+nav ul li {
+    position: relative;
+}
+
+/* Show dropdown correctly */
+nav ul li:hover .dropdown {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Dropdown Items */
+nav ul .dropdown li {
+    padding: 10px 0;
+}
+
+/* Fix Hover Effect */
+nav ul .dropdown li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+/* Ensure hover effect stays inside */
+nav ul .dropdown li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    width: 100%;
+}
+
+
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px;
+    background: rgba(255, 255, 255, 0.2); /* Glassmorphism */
+    border-radius: 15px;
+    backdrop-filter: blur(15px); /* Elegant blur */
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3); /* Soft shadow */
+}
+.hero img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+.hero h2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Adds a stylish glow */
+}
+.hero button {
+    background: linear-gradient(to right, #ff6b6b, #ff4757);
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.hero button:hover {
+    background: linear-gradient(to right, #ff4757, #e84118);
+    transform: scale(1.1);
+}
+
+
+
+/* Categories */
+.categories {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.category {
+    margin: 10px;
+    text-align: center;
+}
+
+.category img {
+    width: 100%;
+    border-radius: 10px;
+}
+.product img {
+    width: 200px; /* Adjust to preferred size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Smooth corners for better aesthetics */
+    display: block;
+    margin: 10px auto; /* Centers images */
+}
+/* Laptop Page Product Grid Layout */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    background: linear-gradient(145deg, #162447, #305080); /* Metallic blue gradient */
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 125, 255, 0.2); /* Subtle blue glow */
+    transition: transform 0.3s ease-in-out;
+}
+
+.product img {
+    width: 180px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: translateY(-5px); /* Subtle lift effect */
+    box-shadow: 0px 8px 15px rgba(0, 125, 255, 0.3); /* Soft glow */
+}
+
+.product-description {
+    font-size: 14px;
+    color: white; /* 🔹 Clearly visible now */
+    margin-top: 10px;
+    text-align: justify;
+}
+/* Footer */
+footer {
+    background: linear-gradient(145deg, #141414, #222222); /* Metallic dark gradient */
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+.category img {
+    width: 250px;  /* Ensures consistent size */
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 8px;
+    transition: 0.4s ease-in-out; /* Smooth effect */
+}
+
+.category img:hover {
+    transform: scale(1.1); /* Makes image slightly bigger */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Adds depth */
+    filter: brightness(1.2); /* Makes image slightly brighter */
+    cursor: pointer; /* Shows hand pointer */
+}
+html {
+    scroll-behavior: smooth;
+}
+button, a {
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #FFD700; /* Gold for elegance */
+    color: black;
+    transform: scale(1.05); /* Subtle pop effect */
+}
+
+a:hover {
+    color: #FFD700; /* Gold hover effect */
+}
+.featured-container {
+    display: flex;
+    justify-content: center; /* Ensures side-by-side alignment */
+    gap: 40px; /* Adds space between items */
+}
+
+.featured-item img {
+    width: 240px; /* Larger size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px; /* More rounded edges */
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.featured-item img:hover {
+    transform: scale(1.08); /* Slight lift effect */
+}
+/* Existing styles */
+.product {
+    /* Other styles */
+}
+
+
+
+
+
