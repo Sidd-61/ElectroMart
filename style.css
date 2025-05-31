@@ -26,21 +26,25 @@ footer {
     color: white;
 }
 body {
-    font-family: 'Poppins', sans-serif; /* Modern font */
-    background: linear-gradient(to right, #1e3c72, #2a5298); /* Deep blue gradient */
-    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Clean white */
+    color: #333; /* Dark gray for text */
+	text-align: center;
     margin: 0;
-    color: white;
+    padding: 0;
 }
+
 
 
 
 /* Header */
 header {
-    background: linear-gradient(to right, #5a3f95, #351a57); /* Rich purple gradient */
+    background: #0073e6; /* Professional light blue */
     color: white;
-    padding: 30px;
+    padding: 40px;
     text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
     font-family: 'Poppins', sans-serif;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
     border-radius: 12px; /* Smooth rounded edges */
@@ -129,7 +133,9 @@ nav ul .dropdown {
     top: 100%;
     left: 0;
     width: 180px;
-    background: linear-gradient(to right, #5a3f95, #351a57); /* Rich purple */
+    background-color: #ffffff; /* Light background */
+    border: 1px solid #0073e6; /* Blue border */
+    color: #333; /* Dark text */
     list-style: none;
     padding: 10px;
     border-radius: 8px;
@@ -160,7 +166,7 @@ nav ul .dropdown li {
 nav ul .dropdown li a {
     display: block;
     padding: 10px;
-    color: white;
+    color: black;
     text-decoration: none;
     transition: 0.3s ease-in-out;
 }
@@ -330,7 +336,6 @@ a:hover {
 .product {
     /* Other styles */
 }
-
 
 
 
